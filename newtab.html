@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>new tab</title>
+    <link rel="icon" href="img/dinofavi.png" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .dino-container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+
+      .dino-image {
+        width: 300px;
+        height: 300px;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .walking-dino {
+        animation: walkSlide 25s infinite linear;
+      }
+
+      @keyframes walkSlide {
+        0% {
+          transform: translateX(200px) scale(1, 1);
+        }
+        49.9% {
+          transform: translateX(-200px) scale(1, 1);
+        }
+        50% {
+          transform: translateX(-200px) scale(-1, 1);
+        }
+        99.9% {
+          transform: translateX(200px) scale(-1, 1);
+        }
+        100% {
+          transform: translateX(200px) scale(1, 1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dino-container">
+      <div class="walking-dino">
+        <img src="img/dino1.svg" alt="可愛い恐竜1" class="dino-image dino1" />
+        <img src="img/dino2.svg" alt="可愛い恐竜2" class="dino-image dino2" />
+      </div>
+    </div>
+
+    <script src="dino.js"></script>
+  </body>
+</html>
